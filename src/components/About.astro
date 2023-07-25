@@ -1,0 +1,37 @@
+---
+import board from "../assets/congregacion.jpeg";
+import pastors from "../assets/pastores2-nobg.png";
+import { Image } from "astro:assets";
+---
+<section class="py-8 px-6">
+    <h2 class="text-3xl md:text-4xl font-bold">Congregación</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div class="overflow-hidden shrink-0 w-full md:max-w-xl h-auto md:max-h-xl rounded place-self-center">
+            <Image class="object-cover w-full h-full" src={board} alt="billboard" quality={"mid"}>
+        </div>
+            <article>
+                <h3 class="font-bold text-3xl">Misión</h3>
+                <p class="font-semibold text-xl mt-3">
+                    En la Iglesia Bautista Dios Proveera, nos comprometemos a vivir para Cristo y compartir el amor y la esperanza del evangelio. Nuestra misión es llevar la luz de Cristo a nuestra comunidad y más allá, guiando a las almas perdidas hacia la salvación y la vida abundante en Él.
+                </p>
+                <p class="font-semibold text-xl mt-3">
+                    Somos seguidores comprometidos de Jesús, siguiendo Su ejemplo de amor, servicio y compasión. Buscamos crecer en nuestra fe, fortaleciendo nuestra relación personal con Dios a través de la oración, la adoración y el estudio de Su Palabra.
+                </p>
+                <p class="font-semibold text-xl mt-3">
+                    Como iglesia, nos esforzamos por ser una familia acogedora y solidaria, brindando un ambiente donde las personas puedan encontrar amor y una comunidad que los apoye. Nos apasiona compartir el mensaje transformador del evangelio y llevar esperanza a aquellos que están perdidos, heridos o desanimados. Creemos que cada alma cuenta y que cada vida puede ser transformada por el poder del amor y la gracia de Cristo.
+                </p>
+            </article>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div>
+            <h3 class="font-bold text-3xl">Nuestros Pastores</h3>
+                    <p class="font-semibold text-xl mt-3">
+                        Los pastores Luis y Juanita Henriquez han servido por más de 5 años y están comprometidos a compartir el amor de Cristo y ser ejemplos de servicio y compasión. Liderar con pasión y devoción, guiando a nuestra comunidad en el camino de la fe. Enseñar y predicar la Palabra de Dios con integridad y claridad.
+                    </p>
+        </div>
+        <div class="overflow-hidden shrink-0 w-full md:max-w-md h-auto md:max-h-md rounded place-self-center">
+            <Image class="object-cover w-full h-full" src={pastors} alt="pastors" quality={"high"}>
+        </div>
+    </div>
+</section>
