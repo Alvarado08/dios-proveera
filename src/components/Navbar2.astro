@@ -1,41 +1,57 @@
-<nav class="bg-white border-gray-200 relative">
-    <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-      </a>
-      <button id="navbar-btn" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="hidden w-full absolute inset-x-0 bottom-0 md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
+<nav id="nav-bar" class="bg-white sticky top-0 mx-auto py-3 px-6 z-10">
+  <!-- Navbar Flex Container -->
+  <div id="nav-items-container" class="md:flex md:items-center md:justify-between">
+      <!-- Container for mobile view -->
+      <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <span class="font-bold text-lg sm:text-xl md:text-3xl mr-2"> <a href="/">Iglesia Bautista Dios Proveera</a></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cross-filled" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M10 2l-.117 .007a1 1 0 0 0 -.883 .993v4h-4a1 1 0 0 0 -1 1v4l.007 .117a1 1 0 0 0 .993 .883h4v8a1 1 0 0 0 1 1h4l.117 -.007a1 1 0 0 0 .883 -.993v-8h4a1 1 0 0 0 1 -1v-4l-.007 -.117a1 1 0 0 0 -.993 -.883h-4v-4a1 1 0 0 0 -1 -1h-4z" stroke-width="0" fill="currentColor"></path>
+             </svg>
+          </div>
+          <!-- Mobile Menu & Theme -->
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-btn" class="icon icon-tabler icon-tabler-menu-2 hover:cursor-pointer block md:hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 6l16 0"></path>
+              <path d="M4 12l16 0"></path>
+              <path d="M4 18l16 0"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="close-menu" class="w-6 h-6 hidden hover:cursor-pointer">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>            
+          </div>
       </div>
-    </div>
-  </nav>
+      <div id="menu-items" class="bg-white md:bg-none flex flex-col md:static absolute left-0 w-full md:w-auto pt-2 pb-3 md:pt-0 md:pb-0 md:flex-row items-center space-x-0 md:space-x-5 md:space-y-0 space-y-3 z-[-1] md:z-auto md:opacity-100 opacity-0 transition-all ease-in-out delay-100 duration-500 top-[-400px] font-firaSans text-xl font-bold">
+        <span><a href="/" class="transition delay-200 duration-300 hover:text-blue-600">Inicio</a></span>
+        <span><a href="/blog" class="transition delay-200 duration-300 hover:text-blue-600">Noticias</a></span>
+        <span><a href="/contact" class="transition delay-200 duration-300 hover:text-blue-600">Contacto</a></span>
+      </div>
+  </div>
+</nav>
 
-  <script>
-    const menuEl = document.querySelector("#navbar-default");
-    const menuBtn = document.querySelector("#navbar-btn");
-    menuBtn.addEventListener("click",()=>{
-    menuEl.classList.toggle("hidden");
-})
-  </script>
+<script>
+  const menuBtn = document.querySelector("#menu-btn");
+  const closeMenuBtn = document.querySelector("#close-menu");
+  const menuItems = document.querySelector("#menu-items");
+
+  menuBtn.addEventListener("click", ()=>{
+    if(menuItems.classList.contains("opacity-0")){
+      menuBtn.classList.toggle("hidden");
+      closeMenuBtn.classList.toggle("hidden");
+      menuItems.classList.remove("opacity-0","top-[-400px]");
+      menuItems.classList.add("top-[51px]","opacity-100");
+    }
+  })
+
+  closeMenuBtn.addEventListener("click", ()=>{
+    if(menuItems.classList.contains("opacity-100")){
+      menuBtn.classList.toggle("hidden");
+      closeMenuBtn.classList.toggle("hidden");
+      menuItems.classList.remove("opacity-100","top-[51px]");
+      menuItems.classList.add("top-[-400px]","opacity-0");
+    }
+  })
+</script>
