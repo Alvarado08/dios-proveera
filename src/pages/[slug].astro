@@ -3,7 +3,7 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths(){
-    const posts = await Astro.glob("./blog/*.md");
+    const posts = await Astro.glob("./noticias/*.md");
     return posts.map(post => ({
         params: {
             slug: post.frontmatter.slug
@@ -20,7 +20,7 @@ const {Content, frontmatter} = Astro.props.post;
     <section>
         <div class="bg-white p-6">
             <Card>
-                <a href="/blog">
+                <a href="/noticias">
                     <button class="bg-blue-900 py-2 px-3 rounded text-sm font-semibold uppercase text-white transition delay-200 duration-300 hover:bg-blue-500 mb-3">
                         regresar
                     </button>
