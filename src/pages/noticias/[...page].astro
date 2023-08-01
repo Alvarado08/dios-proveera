@@ -3,17 +3,22 @@ import Card from "../../components/Card.astro";
 import Layout from "../../layouts/Layout.astro";
 import Pagination from "../../components/Pagination.astro";
 import news from "../../assets/news.jpeg";
+
+// utils imports
+import { sortPosts } from "../../utils";
+
 export async function getStaticPaths({paginate}){
     const posts = await Astro.glob("./*.md");
-    return paginate(posts,{
-        pageSize: 2,
+    const sortedPosts = sortPosts(posts);
+    return paginate(sortedPosts,{
+        pageSize: 3,
     })
 }
 const { page } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Noticias">
+<Layout title="Noticias" desc="Anuncios y noticias">
     <section>
         <div class="overflow-hidden w-full h-auto md:h-96 px-6">
             <Image class="object-cover w-full h-full rounded aspect-[2400/1600]" src={news} alt="News Cover Image" quality={"mid"}>
@@ -26,12 +31,12 @@ import { Image } from "astro:assets";
                         <Card>
                             <h3 class="text-3xl font-bold mb-3">{post.frontmatter.title}</h3>
                             <div class="mb-3">
-                                Written by <strong>{post.frontmatter.author}</strong> on <strong>{new Date(post.frontmatter.date).toLocaleDateString()}</strong>
+                                Escrito por <strong>{post.frontmatter.author}</strong> el <strong>{new Date(post.frontmatter.date).toLocaleDateString()}</strong>
                             </div>
                             <p class="text-xl font-semibold">{post.frontmatter.excerpt}</p>
                             <a href={`/${post.frontmatter.slug}`}>
                                 <button class="bg-blue-900 py-2 px-3 rounded text-sm font-semibold uppercase text-white transition delay-200 duration-300 hover:bg-blue-500 mt-3">
-                                    leer mas
+                                    leer más
                                 </button>
                             </a>
                         </Card>

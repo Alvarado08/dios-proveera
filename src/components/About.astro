@@ -1,5 +1,6 @@
 ---
 import board from "../assets/congregacion.jpeg";
+import congregacion from "../assets/congregacion2.jpg";
 import pastors from "../assets/pastores2-nobg.png";
 import { Image } from "astro:assets";
 ---
@@ -7,7 +8,7 @@ import { Image } from "astro:assets";
     <h2 class="text-3xl md:text-4xl font-bold">Congregación</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         <div class="overflow-hidden shrink-0 w-full md:max-w-xl h-auto md:max-h-xl rounded place-self-center">
-            <Image class="object-cover w-full h-full" src={board} alt="billboard" quality={"mid"}>
+            <Image class="object-cover w-full h-full aspect-[1024/768]" src={congregacion} alt="Congregación de la Iglesia Bautista Dios Proveera" quality={"mid"}>
         </div>
             <article>
                 <h3 class="font-bold text-3xl">Misión</h3>

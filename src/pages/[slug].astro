@@ -16,7 +16,7 @@ export async function getStaticPaths(){
 const {Content, frontmatter} = Astro.props.post;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} desc={`Título de anuncio/noticia: ${frontmatter.title}`}>
     <section>
         <div class="bg-white p-6">
             <Card>
@@ -27,8 +27,9 @@ const {Content, frontmatter} = Astro.props.post;
                 </a>
                 <h3 class="text-3xl font-bold mb-3">{frontmatter.title}</h3>
                 <div class="mb-3">
-                    Written by <strong>{frontmatter.author}</strong> on <strong>{new Date(frontmatter.date).toLocaleDateString()}</strong>
+                    Escrito por <strong>{frontmatter.author}</strong> el <strong>{new Date(frontmatter.date).toLocaleDateString()}</strong>
                 </div>
+                <img src={frontmatter.heroImg} alt="" class="mb-2 w-full h-full max-h-lg">
                 <Content/>
             </Card>
         </div>
