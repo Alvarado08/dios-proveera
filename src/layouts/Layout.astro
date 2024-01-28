@@ -6,7 +6,8 @@ export interface Props {
 	title?: string
 	desc?: string
 }
-const {title = "New Page", desc = "Default description of a page"} = Astro.props as Props;
+export const headline = "Iglesia Bautista Dios Proveera";
+const {title = `New Page - ${headline}`, desc = "Default description of a page"} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
